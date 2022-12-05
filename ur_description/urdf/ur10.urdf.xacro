@@ -8,6 +8,8 @@
 
   <xacro:include filename="$(find ur_description)/urdf/ur.transmission.xacro" />
   <xacro:include filename="$(find ur_description)/urdf/ur.gazebo.xacro" />
+  <xacro:include filename="$(find ur_description)/urdf/ur.camera.xacro" />    
+  <xacro:include filename="$(find ur_description)/urdf/ur.camera.gazebo" />    
 
   <xacro:macro name="cylinder_inertial" params="radius length mass *origin">
     <inertial>
@@ -38,6 +40,7 @@
     <xacro:property name="wrist_1_mass" value="1.96" />
     <xacro:property name="wrist_2_mass" value="1.96" />
     <xacro:property name="wrist_3_mass" value="0.202" />
+
 
     <!-- These parameters are borrowed from the urcontrol.conf file
         but are not verified for the correct permutation.
